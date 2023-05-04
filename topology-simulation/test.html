@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        height: 1000vh;
+      }
+      div {
+        display: none;
+        position: relative;
+        left: 0px;
+        border: 2px solid;
+        width: 10%;
+        height: 50px;
+        margin: 2rem;
+        background-color: brown;
+        border-radius: 100%;
+        animation: movee 3s infinite linear;
+        animation-delay: 1s;
+        opacity: 0;
+        visibility: hidden;
+        /* transition: all .5s linear; */
+      }
+
+      @keyframes movee {
+        0% {
+          opacity: 0;
+          visibility: visible;
+        }
+        10%{
+          opacity: 1;
+        }
+        50%{
+          left: 250px;
+        }
+        100%{
+          opacity: 1;
+          left: 500px;
+        }
+        /* 20%{
+          top:20px;
+        }
+        50%{
+          top:140px;
+        } */
+      }
+      #btn{
+        width: 4rem;
+        height: 2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle circle-1"></div>
+    <button id="btn" onclick="go()">Start</button>
+    <!-- <div class="circle circle-2"></div> -->
+
+    <script>
+    x = document.getElementsByClassName("circle");
+    function go() {
+      if (x[0].style.display === "none") {
+        x[0].style.display = "block";
+      }
+      else{
+        x[0].style.display = "none"
+      }
+      
+    }
+    </script>
+  </body>
+</html>

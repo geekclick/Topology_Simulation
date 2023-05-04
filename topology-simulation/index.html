@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Topology Simulation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1">
+        <div class="topology topology1" onclick="bus()">Bus Topology</div>
+        <div class="topology topology2" onclick="star()">Star Topology</div>
+        <div class="topology topology3" onclick="mesh()">Mesh Topology</div>
+        <div class="topology topology4" onclick="ring()">Ring Topology</div>
+      </div>
+      <div class="box" id="box2">
+        <h1>Simulation</h1>
+        <div class="simulation">
+          <div class="info" id="bus"><div class="path"><div id="data1"></div>
+          <div id="data2"></div>
+          <div id="data3"></div>
+          <div id="data4"></div>
+          <div id="data5"></div>
+          <div id="data6"></div></div><img src="bus.png" alt="#" /></div></div>
+          <div class="info" id="star"><img src="star.png" alt="#" /></div>
+          <div class="info" id="mesh"><img src="mesh.png" alt="#" /></div>
+          <div class="info" id="ring"><img src="ring.png" alt="#" /></div>
+        </div>
+        <div class="control">
+          <div onclick="start_emulation()" class="send_data">Send Data</div>
+          <div onclick="end_simulation()" class="close">Close</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
